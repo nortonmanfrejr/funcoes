@@ -8,7 +8,11 @@ import java.util.stream.Collectors;
 public class ex12 {
 
     public static String embaralhar(String palavra){
-        List<Character> letras = palavra.chars().boxed().map(c -> (char) c.intValue()).collect(Collectors.toList());
+        List<Character> letras = palavra.
+                chars().
+                    boxed().
+                        map(c -> (char) c.intValue()).
+                            collect(Collectors.toList());
         Collections.shuffle(letras);
         StringBuilder t = new StringBuilder(palavra.length());
         letras.forEach(t::append);
